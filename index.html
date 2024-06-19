@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+	
+	<link rel="shortcut icon" href="img/" type="image/png">
+	<title>Компанія "Інтервіт"</title>
+
+	<link rel="stylesheet" href="css/main-style.css">	
+</head>
+<body>
+	<div class="wrapper">
+		<header id="header" class="header lock-padding">
+			<div class="header__container">
+				<a href="index.html" class="header__logo"><img src="img/logo_ua-dark.svg" alt="Logotype Unirem"></a>			
+				
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="index.html" class="menu__link">Головна</a></li>
+							<li>
+								<a href="#" class="menu__link">Продукція</a>
+								<span class="menu__arrow"></span>
+								<ul class="menu__sub-list">
+									<li><a href="tobacco.html" class="menu__sub-link">Деталі тютюнового виробництва</a></li>
+									<li><a href="" class="menu__sub-link">Деталі кондитерського виробництва</a></li>
+								</ul>
+							</li>
+							<li><a href="" class="menu__link">Сервіс</a></li>
+							<li><a href="" class="menu__link">Про компанію</a></li>
+							<li><a href="" class="menu__link">Контакти</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__lang lang">
+					<ul class="lang__list">
+						<li class="lang__link"><a href="">Ru</a></li>
+						<li class="lang__link"><a href="">En</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+		
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="footer__container _container">
+			<div class="footer__top-block">
+				<div data-aos="fade-up" data-aos-delay="200" class="footer__logo footer-column">
+					<a href="index.html"><img src="img/logo_ua-light.svg" alt="Логотип Унірем"></a>
+				</div>
+				<div data-aos="fade-up" data-aos-delay="300" class="footer__adress footer-column">
+					<div class="footer__label">Адреса</div>
+					<div class="footer__text">Київ, Омеляна Пріцака (Академіка Кржижановського), 3</div>
+					<div class="footer__sub-text">УНІРЕМ забезпечить Вас кращим сервісом з металообробки 
+						і найякіснішими деталями українського виробника
+					</div>
+				</div>		
+				<div data-aos="fade-up" data-aos-delay="400" class="footer__contacts footer-column">
+					<div class="footer__label">Телефон</div>
+					<div class="footer__text"> <a href="tel:+380505030207">+38 050 503 02 07</a></div>
+					<div class="footer__label">Email компанії</div>
+					<div class="footer__text"><a href="mailto:unirem@unirem.com.ua">unirem@unirem.com.ua</a></div>
+				</div>
+				<div data-aos="fade-up" data-aos-delay="500" class="footer__menu footer-column">
+					<div class="footer__label">Меню</div>
+					<ul class="footer__list">
+						<li><a href="index.html">Головна</a></li>
+						<li><a href="company.html">Про компанію</a></li>
+						<li><a href="contacts.html">Контакти</a></li>
+					</ul>
+				</div>
+				<div data-aos="fade-up" data-aos-delay="600" class="footer__products footer-column">
+					<div class="footer__label">Продукція</div>
+					<ul class="footer__list">
+						<li><a href="tobacco.html">Деталі тютюнового виробництва</a></li>
+						<li><a href="confectionery.html">Деталі кондитерського виробництва</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__bottom-block">
+				<div class="footer__copyright">© 1997-2022 Унірем. Всі права захищені.</div>
+				<a class="footer__private_police" href="private_police.html">Політика конфеденційності</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-------- Всплывающая форма --------->
+	<div id="popup" class="popup">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup__body">
+			<div class="popup__content">
+				<form id="feedback-form" action="#" class="popup__content" method="post">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Unirem">
+					<input type="hidden" name="admin_email" value="unirem@unirem.com.ua">
+					<input type="hidden" name="form_subject" value="Заявка с главной страницы">
+					<!-- END Hidden Required Fields -->
+					
+						<a href="#header" class="popup__close close-popup"><img src="img/close-popup.svg" alt="close"></a>
+
+						<h3>Відправте заявку і ми з вами зв’яжемося</h3>
+						<div class="form-group">
+							<input id="name" name="Name" type="text" placeholder="Ім’я:*" required>
+						</div>
+						<div class="form-group">
+							<input id="name" name="Phone" type="tel" placeholder="Телефон:*" required>
+						</div>
+						<div class="form-group">
+							<input id="contact" name="E-mail" type="email" placeholder="E-mail:">
+						</div>
+						<div class="form-group">
+							<textarea rows="4" id="project" placeholder="Ваше питання:" type="text" name="Message"></textarea>
+						</div>
+		
+						<div id="rules">
+							<input class="rules" type="checkbox" name="interest" value="Згода на обробку персональних даних" checked>
+							<label for="a1"><a href="">Я приймаю умови по обробці персональних	даних</a></label>
+						</div>
+		
+						<button class="btn" type="submit" id="submit">Відправити</button>
+					</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/script.js"></script>
+	<!-- <script src="js/popup.js"></script> -->
+	<script src="js/aos.js"></script>
+	<script>
+		$(".item").magnificPopup({
+		type : 'image',
+		gallery : {
+			enabled : true
+		}
+		});
+	</script>
+</body>
+</html>
