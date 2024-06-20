@@ -85,3 +85,28 @@ if(menuLinks.length > 0) {
 	}
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const headerLang = document.querySelector('.header__lang');
+    const langList = document.querySelector('.lang__list');
+
+    // Проверяем, является ли устройство мобильным
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+    if (isMobile) {
+        headerLang.addEventListener('click', function(event) {
+            // Переключаем видимость меню при клике на мобильных устройствах
+            if (langList.style.display === 'block') {
+                langList.style.display = 'none';
+            } else {
+                langList.style.display = 'block';
+            }
+        });
+
+        // Закрываем меню при клике вне его области
+        document.addEventListener('click', function(event) {
+            if (!headerLang.contains(event.target)) {
+                langList.style.display = 'none';
+            }
+        });
+    }
+});

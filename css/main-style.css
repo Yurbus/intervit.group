@@ -38,9 +38,6 @@ body {
   font-size: 16px;
   height: 100%;
   font-family: "Mulish", sans-serif;
-  font-size: 16px;
-  height: 100%;
-  font-family: "Mulish", sans-serif;
   color: #000;
   background: #ffffff;
   transition: all 0.3s ease 0s;
@@ -69,66 +66,23 @@ body.lock {
   width: 100%;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .header__container {
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
-  padding: 0 30px;
+  padding: 0 10px;
   align-items: center;
   justify-content: space-between;
   min-height: 70px;
-}
-
-.logo-light {
-  display: none;
-  width: 180px;
-  position: relative;
-  z-index: 5;
 }
 
 .header__logo {
   width: 180px;
   position: relative;
   z-index: 5;
-}
-
-.header__lang {
-  flex: 1 1 auto;
-  margin-left: 80px;
-}
-
-.lang__list {
-  display: flex;
-  flex: 0 0 auto;
-}
-
-.lang__link {
-  text-transform: uppercase;
-  margin-right: 20px;
-}
-
-.lang__link a {
-  color: #464646;
-  font-size: 14px;
-}
-
-.lang__link a::after {
-  display: block;
-  content: "";
-  top: 50%;
-  height: 1px;
-  width: 0%;
-  left: 0;
-  background-color: #000;
-  transition: 0.3s ease all 0.1s;
-}
-
-.lang__link a:hover::after {
-  width: 100%;
-  transition: 0.3s ease all;
 }
 
 .menu__icon {
@@ -144,7 +98,6 @@ body.lock {
   color: #000;
   font-size: 14px;
   line-height: 150%;
-  text-transform: uppercase;
 }
 
 .menu__link::after {
@@ -168,7 +121,7 @@ body.lock {
   top: 100%;
   background-color: #fff;
   padding: 15px;
-  min-width: 390px;
+  min-width: 250px;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -184,7 +137,6 @@ body.lock {
   color: #000;
   font-size: 14px;
   line-height: 150%;
-  text-transform: uppercase;
   display: inline-block;
 }
 
@@ -246,6 +198,88 @@ body._touch .menu__list > li._active .menu__arrow {
   transform: rotate(-180deg);
 }
 
+/* --------- Поиск, языки, кнопка ---------------------------------------------- */
+.header__action {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  z-index: 1;
+}
+
+.header__lang {
+  margin: 0 25px;
+}
+
+@media (min-width: 768px) {
+  .header__lang:hover .lang__list {
+    display: block;
+  }
+}
+.iten_lang {
+  display: flex;
+  position: relative;
+}
+.iten_lang span {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 6px;
+}
+.iten_lang span:hover {
+  color: #EF6A37;
+}
+
+.lang__list .lang__link {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.lang__list .lang__link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.lang__list .lang__link a:hover {
+  color: #EF6A37;
+}
+
+.lang__list {
+  position: absolute;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  padding: 6px 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header__lang:hover .lang__list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__button span {
+  font-size: 14px;
+  color: #000;
+  line-height: 100%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid #000;
+}
+.header__button span:hover {
+  color: #EF6A37;
+  border: 1px solid #EF6A37;
+}
+.header__button img {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
 /* --------- PAGE ---------------------------------------------- */
 .page {
   flex: 1 1 auto;
@@ -265,40 +299,6 @@ body._touch .menu__list > li._active .menu__arrow {
   right: 0;
   bottom: 0;
   z-index: 1;
-}
-
-.page__products {
-  position: relative;
-}
-
-.page__products::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  top: 0;
-  left: 0;
-  background-color: #B7B6B6;
-}
-
-.page__ourwork {
-  position: relative;
-}
-
-.page__partners {
-  position: relative;
-  padding: 60px 0;
-  background: #fff;
-}
-
-.page__advantages {
-  background-color: #262626;
-  color: #fff;
-}
-
-.page__benefit {
-  position: relative;
-  padding: 60px 0;
 }
 
 /* --------HEADER-BLOCK --------------------------------------------------------------- */
@@ -348,14 +348,6 @@ body._touch .menu__list > li._active .menu__arrow {
   margin: 30px 10px;
 }
 
-#feedback-form {
-  position: relative;
-  height: auto;
-  background: #FFFFFF;
-  padding: 50px 10%;
-  z-index: 2;
-}
-
 .popup__close {
   position: absolute;
   right: 0;
@@ -368,129 +360,13 @@ body._touch .menu__list > li._active .menu__arrow {
   height: 20px;
 }
 
-#feedback-form h3 {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 150%;
-  text-transform: uppercase;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.form-group input,
-.form-group textarea {
-  font-family: "Montserrat Regular";
-  border: none;
-  border-bottom: 1px solid #8A8A8A;
-  padding: 15px 5px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 150%;
-  color: #595757;
-  width: 100%;
-}
-
-.form-group input {
-  height: 40px;
-  margin-bottom: 5px;
-}
-
-#rules {
-  margin: 20px 0;
-}
-
-#rules input {
-  width: 14px;
-  height: 14px;
-  background: none;
-  border: 1px solid #B7B6B6;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
-
-#rules label a {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 150%;
-  color: #959595;
-}
-
-.btn {
-  font-family: "Montserrat Regular";
-  position: relative;
-  width: 100%;
-  font-family: "Montserrat Semibold";
-  font-size: 16px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 18px 0;
-  border: none;
-  cursor: pointer;
-  background-color: #ff9900;
-  transition: all 0.3s ease 0s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
-.btn::after {
-  background-color: #ff9900;
-}
-
-.btn::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-
 /*============================ Адаптація сайту ==================================*/
-@media (max-width: 1240px) {
-  .footer-column {
-    margin: 0px 15px 20px 0;
-  }
-  .partners__item {
-    padding: 18px 25px;
-  }
-}
 @media (max-width: 1040px) {
-  .footer__logo {
+  .header__button span {
     display: none;
   }
-}
-@media (max-width: 991px) {
-  .products__body {
-    flex-wrap: wrap;
-  }
-  .products__img {
-    width: 100%;
-    order: 2;
-  }
-  .products__content {
-    width: 100%;
-    order: 1;
-    margin-left: 0px;
+  .header__button img {
+    display: block;
   }
 }
 @media (max-width: 950px) {
@@ -500,48 +376,12 @@ body._touch .menu__list > li._active .menu__arrow {
   .menu__list > li {
     margin: 0px 0px 0px 20px;
   }
-  .header__lang {
-    margin-left: 40px;
-  }
-  .lang__link a {
-    font-size: 13px;
-  }
-  .main-block__title {
-    font-size: 48px;
-  }
-  .advantages__body {
-    display: flex;
-    margin: 40px -15px 0;
-    flex-wrap: wrap;
-  }
-  .advantages__column {
-    padding: 0 15px;
-    flex: 1 1 30%;
-  }
-  .block-work-style {
-    flex-direction: column;
-  }
-  .block__img {
-    max-width: 640px;
-    margin: 20px 0;
-  }
-  .benefit__item {
-    padding: 25px;
-  }
-  .description-work {
-    padding: 0;
-  }
-}
-@media (max-width: 930px) {
-  .footer__top-block {
-    flex: 1 1 50%;
-    flex-wrap: wrap;
-  }
 }
 @media (min-width: 767px) {
   .menu__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   .menu__list > li {
     padding: 10px 0;
@@ -555,18 +395,22 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 @media (max-width: 767px) {
+  .header__container {
+    min-height: 50px;
+  }
   .header__lang {
     display: block;
-    margin-left: 40px;
     z-index: 5;
   }
   .menu__icon {
     display: block;
     z-index: 5;
-    position: relative;
+    position: absolute;
     width: 30px;
     height: 18px;
     cursor: pointer;
+    right: 10px;
+    top: 32%;
   }
   .menu__icon span,
   .menu__icon::before,
@@ -651,132 +495,19 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 16px;
     color: #000;
   }
-  .main-block__title {
-    font-size: 39px;
-  }
-  .main-block__text {
-    font-size: 16px;
-  }
-  .main-block__button {
-    min-height: 50px;
-    font-size: 14px;
-  }
-  .slider-partners {
-    display: block;
-  }
-  .partners__body {
-    display: none;
-  }
-  .benefit__column {
-    flex: 1 1 100%;
-  }
-  .advantages__column {
-    flex: 1 1 100%;
-  }
 }
-@media (max-width: 620px) {
-  .advantages__column {
-    padding: 0 15px;
-    flex: 1 1 100%;
-  }
-}
-@media (max-width: 520px) {
-  .footer__top-block {
-    flex: 0 1 100%;
-  }
-  .footer-column {
-    margin: 0px 30px 20px 0;
-    width: 100%;
-  }
-}
-@media (max-width: 481px) {
-  .header-block__title {
-    font-size: 30px;
-  }
-  .header-block__sub-title {
-    font-size: 16px;
-  }
-  .main-block__body {
-    align-items: center;
-  }
-  .main-block__title {
-    font-size: 27px;
-  }
-  .main-block__text {
-    font-size: 14px;
-  }
-  .products__content .products__content-header {
-    font-size: 17px;
-  }
-  .ourwork__body {
-    margin: 25px 0;
-  }
-  .slider {
-    padding: 0;
-  }
-  .benefit__item {
-    padding: 20px;
-    flex-direction: column-reverse;
-  }
-  .benefit__value {
-    font-size: 18px;
-  }
-  .benefit__text {
-    font-size: 14px;
-    padding-top: 15px;
-  }
-  .benefit__item img {
-    margin-left: 0;
-  }
-}
-@media (max-width: 414px) {
+@media (max-width: 479.98px) {
   .header__logo {
-    width: 140px;
+    width: 110px;
   }
+}
+@media (max-width: 414.98px) {
   .menu__link {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 120%;
+    font-weight: 600;
   }
   .menu__sub-link {
-    font-size: 14px;
-  }
-  .main-block__body {
-    padding: 46% 0px 0px 0px;
-  }
-  #feedback-form {
-    padding: 35px 7%;
-  }
-  #feedback-form h3 {
     font-size: 16px;
-    line-height: 143%;
-  }
-  .form-group input, .form-group textarea {
-    padding: 13px 5px;
-    line-height: 140%;
-  }
-}
-@media (max-width: 375px) {
-  .header-block__title {
-    font-size: 18px;
-  }
-  .header-block__sub-title {
-    font-size: 14px;
-  }
-}
-@media (max-width: 320px) {
-  .main-block__title {
-    font-size: 24px;
-  }
-  .products {
-    padding: 40px 0px;
-  }
-  .header-block__title {
-    font-size: 29px;
-  }
-  .header-block__sub-title {
-    font-size: 16px;
-  }
-  .list__type-mashine li {
-    font-size: 12px;
   }
 }/*# sourceMappingURL=main-style.css.map */
