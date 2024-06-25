@@ -1,10 +1,11 @@
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock_padding");
 
 let unlock = true;
 
-const timeout = 500;
+const timeout = 300;
 
 if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
@@ -17,8 +18,7 @@ if (popupLinks.length > 0) {
         });
     }
 }
-
-const popupClose = document.querySelectorAll('.close-popup');
+const popupCloseIcon = document.querySelectorAll('.close-popup');
 if (popupClose.length > 0) {
     for (let index = 0; index < popupCloseIcon.length; index++) {
         const el = popupCloseIcon[index];
@@ -39,7 +39,7 @@ function popupOpen(curentPopup) {
         }
         curentPopup.classList.add('open');
         curentPopup.addEventListener("click", function (e) {
-            if (!e.target.closest('.popup__body')) {
+            if (!e.target.closest('.popup__content')) {
                 popupClose(e.target.closest('.popup'));
             }
         });
@@ -57,12 +57,12 @@ function popupClose(popupActive, doUnLock = true) {
 function bodyLock() {
     const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
-    if(lockPadding.length > 0){
+	if (lockPadding.length > 0) {
     for (let index = 0; index < lockPadding.length; index++) {
         const el = lockPadding[index];
         el.style.paddingRight = lockPaddingValue;
-    }
-    }
+  	  }
+	}
     body.style.paddingRight = lockPaddingValue;
     body.classList.add('lock');
 
@@ -74,12 +74,12 @@ function bodyLock() {
 
 function bodyUnLock() {
     setTimeout(function () {
-        if(lockPadding.length > 0){
-            for (let index = 0; index < lockPadding.length; index++) {
-                const el = lockPadding[index];
-                el.style.paddingRight = '0px';
-            }
-        }
+		if (lockPadding.length > 0) {
+        for (let index = 0; index < lockPadding.length; index++) {
+            const el = lockPadding[index];
+            el.style.paddingRight = '0px';
+			}
+		}
         body.style.paddingRight = '0px';
         body.classList.remove('lock');
     }, timeout);

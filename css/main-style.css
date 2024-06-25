@@ -47,6 +47,10 @@ body.lock {
   overflow: hidden;
 }
 
+body.lock header {
+  padding-right: 17px;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -122,7 +126,7 @@ body.lock {
   background-color: #fff;
   padding: 15px;
   min-width: 250px;
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 .menu__sub-list li {
@@ -182,9 +186,9 @@ body._touch .menu__arrow {
   height: 0;
   margin: 0px 0px 0px 5px;
   transition: transform 0.3s ease 0s;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 10px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid black;
 }
 
 body._touch .menu__list > li._active .menu__sub-list {
@@ -192,6 +196,7 @@ body._touch .menu__list > li._active .menu__sub-list {
   visibility: visible;
   transform: translate(0px, 0px);
   pointer-events: all;
+  border-radius: 6px;
 }
 
 body._touch .menu__list > li._active .menu__arrow {
@@ -206,6 +211,14 @@ body._touch .menu__list > li._active .menu__arrow {
   z-index: 1;
 }
 
+.search__icon .icon-search {
+  font-size: 20px;
+  color: #000;
+}
+.search__icon .icon-search:hover {
+  color: #EF6A37;
+}
+
 .header__lang {
   margin: 0 25px;
 }
@@ -217,17 +230,18 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .iten_lang {
   display: flex;
+  align-items: center;
   position: relative;
-}
-.iten_lang span {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
-  margin-right: 6px;
 }
-.iten_lang span:hover {
+.iten_lang:hover {
   color: #EF6A37;
+}
+.iten_lang .icon-planet {
+  margin-left: 6px;
 }
 
 .lang__list .lang__link {
@@ -262,7 +276,7 @@ body._touch .menu__list > li._active .menu__arrow {
   visibility: visible;
 }
 
-.header__button span {
+.header__button a span {
   font-size: 14px;
   color: #000;
   line-height: 100%;
@@ -270,11 +284,11 @@ body._touch .menu__list > li._active .menu__arrow {
   border-radius: 30px;
   border: 1px solid #000;
 }
-.header__button span:hover {
+.header__button a span:hover {
   color: #EF6A37;
   border: 1px solid #EF6A37;
 }
-.header__button img {
+.header__button a img {
   display: none;
   width: 24px;
   height: 24px;
@@ -286,7 +300,6 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .page__main-block {
-  background: url(../img/top-bg.jpg) no-repeat center/cover;
   height: 100vh;
   overflow: hidden;
 }
@@ -310,62 +323,12 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 60px 0 0 0;
 }
 
-/*------------------------- Form -------------------------------*/
-.popup {
-  position: fixed;
-  background-color: rgba(54, 54, 54, 0.9);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease 0s;
-  z-index: 5;
-}
-
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-}
-
-.popup__area {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.popup__body {
-  min-height: 100%;
-  position: relative;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px 10px;
-}
-
-.popup__close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 15px;
-}
-
-.popup__close img {
-  width: 20px;
-  height: 20px;
-}
-
 /*============================ Адаптація сайту ==================================*/
 @media (max-width: 1040px) {
-  .header__button span {
+  .header__button a span {
     display: none;
   }
-  .header__button img {
+  .header__button a img {
     display: block;
   }
 }
@@ -392,6 +355,7 @@ body._touch .menu__list > li._active .menu__arrow {
     visibility: hidden;
     pointer-events: none;
     transition: all 0.3s ease 0s;
+    border-radius: 10px;
   }
 }
 @media (max-width: 767px) {

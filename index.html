@@ -11,6 +11,8 @@
 	<link rel="shortcut icon" href="img/" type="image/png">
 	<title>Компанія "Інтервіт"</title>
 
+	<link rel="stylesheet" href="css/modal-style.css">
+	<link rel="stylesheet" href="css/iconfont.css">
 	<link rel="stylesheet" href="css/main-style.css">	
 </head>
 <body>
@@ -48,12 +50,12 @@
 
 					<div class="header__search">
 						<div class="search__icon">
-							<a href=""><img src="img/svg/search.svg" alt="icon"></a>
+							<a href="" class="icon-search"></a>
 						</div>
 					</div>
 
 					<div class="header__lang lang">
-						<div class="iten_lang"><span>Ua</span><img src="img/svg/planet.svg" alt="icon"></div>
+						<div class="iten_lang">Ua<span class="icon-planet"></span></div>
 						<ul class="lang__list">
 							<li class="lang__link"><a href="">Ru</a></li>
 							<li class="lang__link"><a href="">En</a></li>
@@ -61,9 +63,9 @@
 					</div>
 
 					<div class="header__button">
-						<a href=""><span>Зв’язатись з нами</span> <img src="img/svg/call-outline.svg" alt=""></a>
+						<a id="# popup" href="#popup" class="popup-link"><span>Зв’язатись з нами</span><img src="img/svg/call-outline.svg" alt=""></a>
 					</div>
-					
+
 				</div>
 
 			
@@ -117,48 +119,47 @@
 
 	<!-------- Всплывающая форма --------->
 	<div id="popup" class="popup">
-		<a href="#header" class="popup__area"></a>
-		<div class="popup__body">
-			<div class="popup__content">
-				<form id="feedback-form" action="#" class="popup__content" method="post">
-					<!-- Hidden Required Fields -->
-					<input type="hidden" name="project_name" value="Unirem">
-					<input type="hidden" name="admin_email" value="unirem@unirem.com.ua">
-					<input type="hidden" name="form_subject" value="Заявка с главной страницы">
-					<!-- END Hidden Required Fields -->
-					
-						<a href="#header" class="popup__close close-popup"><img src="img/close-popup.svg" alt="close"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="feedback-container">
+                    <h4 class="feedback__title">Зворотній зв’язок</h4>
+                    <a href="#" class="popup__close close-popup feedback_close"><img src="img/svg/close.svg" alt="icon"></a>
+					<div class="social__wrapp">
+                        <h4 class="social__title">Або написати в месенджер</h4>
+                        <ul class="list_soc-icon">
+                            <li><a href="page-single-post.html"><img src="assets/img/inst-green.svg" alt="icon"></a> <span>Instagram</span></li>
+                            <li><a href="page-single-post.html"><img src="assets/img/facebook-green.svg" alt="icon"></a> <span>Facebook</span></li>
+                            <li><a href="page-single-post.html"><img src="assets/img/telegram-green.svg" alt="icon"></a> <span>Telegram</span></li>
+                            <li><a href="page-single-post.html"><img src="assets/img/viber-green.svg" alt="icon"></a> <span>Viber</span></li>
+                        </ul>
+                    </div>
+                    <form action="" class="form__feedback">
 
-						<h3>Відправте заявку і ми з вами зв’яжемося</h3>
-						<div class="form-group">
-							<input id="name" name="Name" type="text" placeholder="Ім’я:*" required>
-						</div>
-						<div class="form-group">
-							<input id="name" name="Phone" type="tel" placeholder="Телефон:*" required>
-						</div>
-						<div class="form-group">
-							<input id="contact" name="E-mail" type="email" placeholder="E-mail:">
-						</div>
-						<div class="form-group">
-							<textarea rows="4" id="project" placeholder="Ваше питання:" type="text" name="Message"></textarea>
-						</div>
-		
-						<div id="rules">
-							<input class="rules" type="checkbox" name="interest" value="Згода на обробку персональних даних" checked>
-							<label for="a1"><a href="">Я приймаю умови по обробці персональних	даних</a></label>
-						</div>
-		
-						<button class="btn" type="submit" id="submit">Відправити</button>
-					</form>
-			</div>
-		</div>
-	</div>
+                        <div class="input__feedback">
+                            <input type="text" placeholder="Ім'я:" />
+                            <input type="tel" placeholder="Телефон:" />
+                            <input type="email" placeholder="Email" />
+							<textarea name="message" id="message"  placeholder="Повідомлення"></textarea>
+                        </div>
+                        <div class="bottom__action">
+                            <div class="policy__check">
+                                <input type="checkbox" id="policy" class="policy" name="interest" value="Політика конфіденційності" required>
+                                <label for="policy" class="policy__label"><a href="#" target="_blank">Політика конфіденційності</a></label>
+                            </div>
+                            <button type="submit" class="contact__btn">Відправити</button>
+                        </div>
 
-	<script src="js/jquery-3.6.0.js"></script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/slick.js"></script>
 	<script src="js/script.js"></script>
-	<!-- <script src="js/popup.js"></script> -->
+	<script src="js/popup.js"></script>
 	<script src="js/aos.js"></script>
 	<script>
 		$(".item").magnificPopup({
