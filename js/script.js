@@ -110,3 +110,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Slider hero 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slide');
+    const currentSlideElement = document.querySelector('.current-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    const slideInterval = 3000; // 3 seconds
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        currentSlideElement.textContent = `0${index + 1}`;
+        // Trigger reflow to restart animation
+        currentSlideElement.style.animation = 'none';
+        currentSlideElement.offsetHeight; // Trigger reflow
+        currentSlideElement.style.animation = 'fadeInUp 1s ease-in-out';
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            currentSlide = parseInt(e.target.getAttribute('data-slide'));
+            showSlide(currentSlide);
+        });
+    });
+
+    currentSlideElement.addEventListener('click', () => {
+        nextSlide();
+    });
+
+    // Show the initial slide
+    showSlide(currentSlide);
+
+    // Set the interval for automatic slide change
+    setInterval(nextSlide, slideInterval);
+});
