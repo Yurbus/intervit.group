@@ -343,6 +343,7 @@ body._touch .menu__list > li._active .menu__arrow {
   background: #F0F3F6;
   border-radius: 20px;
   padding: 50px;
+  margin: 5px;
   position: relative;
 }
 
@@ -375,6 +376,7 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 16px;
     line-height: 1.3;
     color: #141414;
+    margin-bottom: 5px;
     span {
       font-weight: 600;
       font-size: 14px;
@@ -520,7 +522,7 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .header__container {
     min-height: 50px;
   }
@@ -622,10 +624,38 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 16px;
     color: #000;
   }
+  /*-- modal form --*/
+  .feedback-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tech_list:last-child {
+    margin-top: 15px;
+  }
 }
 
-@media (max-width: 620px) {
-
+@media (max-width: 520px) {
+  .popup__close {
+    width: 15px;
+    height: 15px;
+  }
+  .tech_list li a {
+    font-size: 18px;
+  }
+  .feedback-container {
+    padding: 35px 20px;
+  }
+  .add__input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .input__feedback .input__name {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
 }
 
 

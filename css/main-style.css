@@ -337,6 +337,7 @@ body._touch .menu__list > li._active .menu__arrow {
   background: #F0F3F6;
   border-radius: 20px;
   padding: 50px;
+  margin: 5px;
   position: relative;
 }
 
@@ -369,6 +370,7 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 16px;
   line-height: 1.3;
   color: #141414;
+  margin-bottom: 5px;
 }
 .tech_list li span {
   font-weight: 600;
@@ -469,6 +471,10 @@ body._touch .menu__list > li._active .menu__arrow {
     grid-template-columns: 1fr 440px;
     gap: 20px;
   }
+  .tech__title, .feedback__title {
+    font-weight: 700;
+    font-size: 24px;
+  }
 }
 @media (max-width: 950px) {
   .menu__link {
@@ -496,7 +502,7 @@ body._touch .menu__list > li._active .menu__arrow {
     border-radius: 10px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .header__container {
     min-height: 50px;
   }
@@ -596,6 +602,36 @@ body._touch .menu__list > li._active .menu__arrow {
   .menu__sub-link {
     font-size: 16px;
     color: #000;
+  }
+  /*-- modal form --*/
+  .feedback-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tech_list:last-child {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 520px) {
+  .popup__close {
+    width: 15px;
+    height: 15px;
+  }
+  .tech_list li a {
+    font-size: 18px;
+  }
+  .feedback-container {
+    padding: 35px 20px;
+  }
+  .add__input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .input__feedback .input__name {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 @media (max-width: 479.98px) {
