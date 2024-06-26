@@ -75,6 +75,7 @@
 		
 		</main>
 	</div>
+
 	<footer class="footer">
 		<div class="footer__container _container">
 			<div class="footer__body">
@@ -125,24 +126,39 @@
         <div class="popup__body">
             <div class="popup__content">
                 <div class="feedback-container">
-                    <h4 class="feedback__title">Зворотній зв’язок</h4>
                     <a href="#" class="popup__close close-popup feedback_close"><img src="img/svg/close.svg" alt="icon"></a>
-					<div class="social__wrapp">
-                        <h4 class="social__title">Або написати в месенджер</h4>
-                        <ul class="list_soc-icon">
-                            <li><a href="page-single-post.html"><img src="assets/img/inst-green.svg" alt="icon"></a> <span>Instagram</span></li>
-                            <li><a href="page-single-post.html"><img src="assets/img/facebook-green.svg" alt="icon"></a> <span>Facebook</span></li>
-                            <li><a href="page-single-post.html"><img src="assets/img/telegram-green.svg" alt="icon"></a> <span>Telegram</span></li>
-                            <li><a href="page-single-post.html"><img src="assets/img/viber-green.svg" alt="icon"></a> <span>Viber</span></li>
-                        </ul>
-                    </div>
-                    <form action="" class="form__feedback">
 
+					<div class="tech__wrapp">
+                        <h4 class="tech__title">Зв’язатися з нами!</h4>
+						<span class="tech__text">Можете зв’язатися з нами за телефонами нижче!</span>
+						<ul class="tech_list">
+							<li><span>Технічний відділ</span></li>
+							<li>Роман Олександрович</li>
+							<li><a href="tel:+380503115799">+38 050 311 57 99</a></li>
+						</ul>
+						<ul class="tech_list">
+							<li><span>Відділ продажів</span></li>
+							<li>Андрій Юлійович</li>
+							<li><a href="tel:+380503115799">+38 050 311 57 99</a></li>
+						</ul>
+                    </div>
+
+                    <form action="" class="form__feedback">
+						<h4 class="feedback__title">Зворотній зв’язок</h4>
+						<span class="feedback__text">Можете зв’язатися з нами за телефонами нижче!</span>
                         <div class="input__feedback">
-                            <input type="text" placeholder="Ім'я:" />
-                            <input type="tel" placeholder="Телефон:" />
+							<div class="input__name">
+								<input type="text" placeholder="Ім'я:" />
+								<input type="tel" placeholder="Телефон:" />
+							</div>
                             <input type="email" placeholder="Email" />
-							<textarea name="message" id="message"  placeholder="Повідомлення"></textarea>
+							<div class="add__input">
+								<textarea name="message" id="message" rows="4" placeholder="Повідомлення"></textarea>
+								<div class="fields__add">
+									<label for="avatar">Додати креслення</label>
+									<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+								</div>
+							</div>
                         </div>
                         <div class="bottom__action">
                             <div class="policy__check">
@@ -151,8 +167,8 @@
                             </div>
                             <button type="submit" class="contact__btn">Відправити</button>
                         </div>
-
                     </form>
+
                 </div>
             </div>
         </div>

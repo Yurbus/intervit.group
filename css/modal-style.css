@@ -32,17 +32,12 @@
 }
 
 .popup__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  margin: 40px auto 20px;
   position: relative;
   transition: all 0.3s ease 0s;
   opacity: 0;
   transform: translate(0%, 10%);
-}
-
-.popup__close {
-  font-size: 30px;
-  position: absolute;
-  right: 20px;
-  top: -100px;
 }
