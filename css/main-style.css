@@ -348,6 +348,7 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   padding: 80px 30px 0;
   min-height: 100vh;
+  margin-bottom: 100px;
 }
 
 .hero__container {
@@ -359,7 +360,7 @@ body._touch .menu__list > li._active .menu__arrow {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
 .hero__bg {
@@ -367,11 +368,14 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .hero__bg img {
   border-radius: 20px;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slider {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1320px;
   position: relative;
 }
 
@@ -402,7 +406,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .heading {
-  font-size: 48px;
+  font-size: clamp(28px, 7vw, 48px);
   font-weight: bold;
   color: var(--white-color);
   margin: 10px 0;
@@ -437,7 +441,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .pagination .total-slides {
   font-family: "Conthrax Sb";
   margin-left: 5px;
-  font-size: 30px;
+  font-size: clamp(20px, 3vw, 30px);
 }
 .pagination .divider {
   position: relative;
@@ -455,7 +459,7 @@ body._touch .menu__list > li._active .menu__arrow {
   font-family: "Conthrax Sb";
   margin-right: 5px;
   animation: fadeInUp 1s ease-in-out;
-  font-size: 80px;
+  font-size: clamp(60px, 7vw, 80px);
   line-height: 100%;
   margin-top: 45px;
 }
@@ -686,6 +690,9 @@ body._touch .menu__list > li._active .menu__arrow {
     font-weight: 700;
     font-size: 24px;
   }
+  .footer__body {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (max-width: 950px) {
   .menu__link {
@@ -814,6 +821,10 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 16px;
     color: #000;
   }
+  /*--- slider ---*/
+  .slide {
+    height: 470px;
+  }
   /*-- modal form --*/
   .feedback-container {
     grid-template-columns: 1fr;
@@ -821,6 +832,11 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .tech_list:last-child {
     margin-top: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .footer__body {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 520px) {
