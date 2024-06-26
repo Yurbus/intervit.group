@@ -505,7 +505,7 @@ body._touch .menu__list > li._active .menu__arrow {
   background-color: var(--dark-color);
   color: var(--white-color);
   padding: 60px 0 0 0;
-  margin: 30px;
+  margin: 0 30px 30px;
   border-radius: 20px;
 }
 .footer a {
