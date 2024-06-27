@@ -576,6 +576,14 @@ body._touch .menu__list > li._active .menu__arrow {
   margin-bottom: 16px;
 }
 
+.link__contact {
+  font-size: 20px;
+  font-weight: 600;
+}
+.link__contact:hover {
+  color: var(--pr-hover-color);
+}
+
 .footer__list li {
   margin-bottom: 14px;
 }

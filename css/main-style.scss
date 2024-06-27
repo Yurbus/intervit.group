@@ -529,9 +529,6 @@ body._touch .menu__list > li._active .menu__arrow {
     }
   }
 }
-
-.footer__menu {
-}
 .footer__label {
   font-weight: 800;
   font-size: 16px; 
@@ -539,6 +536,13 @@ body._touch .menu__list > li._active .menu__arrow {
   text-transform: uppercase;
   color: var(--primary-color);
   margin-bottom: 16px;
+}
+.link__contact{
+  font-size: 20px;
+  font-weight: 600;
+  &:hover {
+    color: var(--pr-hover-color);
+  }
 }
 .footer__list {
   li {
@@ -549,12 +553,8 @@ body._touch .menu__list > li._active .menu__arrow {
     }
   }
 }
-.footer__contacts {
-}
 .label__address {
   margin-top: 15px;
-}
-.footer__text {
 }
 .footer__copyright {
   display: flex;
@@ -565,11 +565,6 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 22px 0;
   .copyright{
     margin-bottom: 15px;
-  }
-  .copyright__left {
-  }
-  .footer__private_police {
-
   }
   .copyright__right {
     margin-top: 15px;
