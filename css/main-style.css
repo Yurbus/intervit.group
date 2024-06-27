@@ -541,6 +541,10 @@ body._touch .menu__list > li._active .menu__arrow {
   text-decoration: underline;
 }
 
+.label__address {
+  margin-top: 15px;
+}
+
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
