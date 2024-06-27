@@ -552,6 +552,21 @@ body._touch .menu__list > li._active .menu__arrow {
   max-width: 222px;
 }
 
+.footer__social {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.footer__social li {
+  margin-right: 25px;
+}
+.footer__social li a {
+  font-size: 26px;
+}
+.footer__social li a:hover::before {
+  color: var(--primary-color);
+}
+
 .footer__label {
   font-weight: 800;
   font-size: 16px;
@@ -709,8 +724,14 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 14px;
 }
 
-.policy {
+.policy__check {
   margin-bottom: 20px;
+}
+.policy__check .policy__label {
+  line-height: 120%;
+}
+.policy__check .policy__label a {
+  font-size: 14px;
 }
 
 .contact__btn {

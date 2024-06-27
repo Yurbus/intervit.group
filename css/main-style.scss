@@ -515,6 +515,20 @@ body._touch .menu__list > li._active .menu__arrow {
 .footer__logo {
   max-width: 222px;
 }
+.footer__social {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  li {
+    margin-right: 25px;
+    a {
+      font-size: 26px;
+      &:hover::before {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
 .footer-column {
 }
 .footer__menu {
@@ -689,12 +703,18 @@ body._touch .menu__list > li._active .menu__arrow {
 .bottom__action {
 }
 .policy__check {
-}
-.policy {
   margin-bottom: 20px;
+  .policy {
+    
+  }
+  .policy__label {
+    line-height: 120%;
+    a {
+      font-size: 14px;
+    }
+  }
 }
-.policy__label {
-}
+
 .contact__btn {
   font-weight: 600;
   font-size: 16px;
