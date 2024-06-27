@@ -989,6 +989,9 @@ body._touch .menu__list > li._active .menu__arrow {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+  .footer-column {
+    margin-bottom: 15px;
+  }
   .footer__logo {
     max-width: 250px;
     margin-bottom: 30px;
