@@ -348,8 +348,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .hero {
   position: relative;
   padding: 80px 30px 0;
-  min-height: 100vh;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  height: 790px;
 }
 
 .hero__container {
@@ -361,7 +361,7 @@ body._touch .menu__list > li._active .menu__arrow {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: 180px;
 }
 
 .hero__bg {
@@ -369,9 +369,9 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .hero__bg img {
   border-radius: 20px;
-  height: 90vh;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
 }
 
 .slider {
@@ -499,6 +499,34 @@ body._touch .menu__list > li._active .menu__arrow {
     transform: translateY(0px);
   }
 }
+/*---------------- Section partners ---------------------------------*/
+.partners {
+  margin-bottom: 50px;
+}
+
+.partners__body {
+  margin: 0 auto;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.partners__list li {
+  display: block;
+  margin: 0 clamp(10px, 2vw, 50px);
+}
+.partners__list li img {
+  width: 150px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease 0s;
+}
+.partners__list li img:hover {
+  filter: grayscale(0%);
+}
+
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
 /*---------------- FOOTER ----------------------------------------------------------------------*/
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
@@ -853,6 +881,9 @@ body._touch .menu__list > li._active .menu__arrow {
   .slide {
     height: 470px;
   }
+  .hero__body {
+    margin-top: 100px;
+  }
   /*-- modal form --*/
   .feedback-container {
     grid-template-columns: 1fr;
@@ -880,7 +911,7 @@ body._touch .menu__list > li._active .menu__arrow {
     height: 80vh;
   }
   .hero__body {
-    margin-top: 26%;
+    margin-top: 120px;
   }
   .hero__bg {
     padding: 80px 10px 0;
@@ -888,6 +919,7 @@ body._touch .menu__list > li._active .menu__arrow {
   .slide {
     height: 430px;
   }
+  /*---- footer -----*/
   .footer {
     margin: 0 10px 30px;
   }
@@ -918,6 +950,9 @@ body._touch .menu__list > li._active .menu__arrow {
 @media (max-width: 479.98px) {
   .header__logo {
     width: 110px;
+  }
+  .hero {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 414.98px) {
