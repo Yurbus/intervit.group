@@ -652,7 +652,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 /*---------------- Section directions ---------------------------------*/
 .directions {
-  margin: 50px 0;
+  margin: 120px 0;
 }
 
 .directions__title {
@@ -681,6 +681,67 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 14px;
   line-height: 1.3;
   color: var(--dark-color);
+}
+
+/*---------------- Section segmental ---------------------------------*/
+.segmental {
+  margin: 120px 0;
+}
+
+.segmental__subtitle {
+  margin-bottom: 18px;
+}
+
+.segmental__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.item__segmental {
+  background: var(--grey-color);
+  padding: 20px;
+  border-radius: 15px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item__segmental:hover {
+  background: var(--white-color);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+.item__segmental:hover .item_link .item__title {
+  color: var(--primary-color);
+}
+.item__segmental:hover .item_link svg circle {
+  fill: var(--primary-color);
+}
+.item__segmental:hover .item_link svg path {
+  fill: var(--white-color);
+}
+.item__segmental .item_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item__segmental .item_link svg {
+  width: 36px;
+  height: 36px;
+}
+.item__segmental .item_link .item__title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--dark-color);
+  width: 80%;
+}
+.item__segmental .item_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
@@ -939,6 +1000,9 @@ body._touch .menu__list > li._active .menu__arrow {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .segmental__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .footer__body {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1101,6 +1165,14 @@ body._touch .menu__list > li._active .menu__arrow {
   .stats-block {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .segmental__items {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 45px;
+  }
+  .item__segmental {
+    height: 200px;
   }
 }
 @media (max-width: 520px) {
