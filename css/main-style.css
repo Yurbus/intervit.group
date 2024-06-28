@@ -515,7 +515,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 /*---------------- Section partners ---------------------------------*/
 .partners {
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .partners__body {
