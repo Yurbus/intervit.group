@@ -158,3 +158,43 @@ document.addEventListener("DOMContentLoaded", function() {
     // Set the interval for automatic slide change
     setInterval(nextSlide, slideInterval);
 });
+
+
+
+// Section about
+document.addEventListener('DOMContentLoaded', () => {
+    const statsBlock = document.getElementById('stats');
+    const stats = document.querySelectorAll('.stat');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                stats.forEach(stat => {
+                    const line = stat.querySelector('.line');
+                    const number = stat.querySelector('.number');
+                    const target = +number.getAttribute('data-target');
+                    stat.classList.add('visible');
+                    line.classList.add('visible');
+                    scrollToTarget(number, target);
+                });
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsBlock);
+
+    function scrollToTarget(element, target) {
+        let start = 0;
+        const increment = target / 100;
+        const duration = 2000;
+        const stepTime = duration / 100;
+        const timer = setInterval(() => {
+            start += increment;
+            element.textContent = Math.round(start);
+            if (start >= target) {
+                clearInterval(timer);
+                element.textContent = target;
+            }
+        }, stepTime);
+    }
+});

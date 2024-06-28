@@ -22,6 +22,17 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/arrow/');
+  src:  url('../fonts/arrow/#iefix') format('embedded-opentype'),
+    url('../fonts/arrow//icomoon.ttf?fk264g') format('truetype'),
+    url('../fonts/arrow//icomoon.woff?fk264g') format('woff'),
+    url('../fonts/arrow//icomoon.svg?fk264g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -37,15 +48,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-btn_arrow:before {
-  content: "\e900";
-}
-.icon-call-outline:before {
-  content: "\e901";
-}
-.icon-menu_arrow:before {
-  content: "\e902";
+  content: "\e905";
 }
 .icon-planet:before {
   content: "\e903";
