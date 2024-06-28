@@ -910,6 +910,11 @@ body._touch .menu__list > li._active .menu__arrow {
   .m-about__body {
     grid-template-columns: 1fr;
   }
+  .directions__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 
 
   .footer__body {
@@ -1094,7 +1099,14 @@ body._touch .menu__list > li._active .menu__arrow {
   .slide {
     height: 430px;
   }
-
+  .m-about {
+    margin: 50px 10px;
+  }
+  .directions__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
 
 
