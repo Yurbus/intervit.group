@@ -791,6 +791,7 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .copyright__icons {
     display: flex;
+    align-items: center;
     li {
       width: 65px;
       margin-left: 5px;

@@ -829,6 +829,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .footer__copyright .copyright__icons {
   display: flex;
+  align-items: center;
 }
 .footer__copyright .copyright__icons li {
   width: 65px;
