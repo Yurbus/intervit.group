@@ -426,7 +426,7 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: bold;
   color: var(--white-color);
   margin: 10px 0;
-  max-width: 630px;
+  max-width: 660px;
   animation: fadeInUp 1s ease-in-out;
 }
 
@@ -513,37 +513,9 @@ body._touch .menu__list > li._active .menu__arrow {
     transform: translateY(0px);
   }
 }
-/*---------------- Section partners ---------------------------------*/
-.partners {
-  margin: 50px 0;
-}
-
-.partners__body {
-  margin: 0 auto;
-}
-
-.partners__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.partners__list li {
-  display: block;
-  margin: 0 clamp(10px, 2vw, 50px);
-}
-.partners__list li img {
-  width: 150px;
-  filter: grayscale(100%);
-  transition: all 0.3s ease 0s;
-}
-.partners__list li img:hover {
-  filter: grayscale(0%);
-}
-
 /*---------------- Section about us ---------------------------------*/
 .m-about {
-  margin: 50px 30px;
+  margin: 100px 30px 50px;
   background: var(--grey-color);
   padding: 75px 0;
   border-radius: 20px;
@@ -711,7 +683,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .item__segmental:hover {
   background: var(--white-color);
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease;
+  transition: all 0.1s ease 0s;
 }
 .item__segmental:hover .item_link .item__title {
   color: var(--primary-color);
@@ -1173,7 +1145,7 @@ body._touch .menu__list > li._active .menu__arrow {
     margin-top: 45px;
   }
   .item__segmental {
-    height: 200px;
+    height: 250px;
   }
 }
 @media (max-width: 520px) {
