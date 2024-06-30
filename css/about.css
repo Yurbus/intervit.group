@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
+:root {
+  --page-bg: #F3F3F3;
+  --white-color: #fff;
+  --primary-color: #EF6A37;
+  --pr-hover-color: #e26634;
+  --dark-color: #141414;
+  --grey-color: #DCE0E3;
+}
+
+.main__screen {
+  padding-top: 150px;
+}
+
+.screen__hedding {
+  text-align: center;
+}
+.screen__hedding .screen__title {
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 130%;
+  color: var(--dark-color);
+}
+.screen__hedding img {
+  margin: 30px 0 80px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 200px;
+}
+
+.screen__description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.screen__description p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+.screen__description span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+/*----------- advantages -------------------------------*/
+.advantages {
+  margin: 175px 0;
+}
+
+.advantages__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--dark-color);
+  max-width: 650px;
+}
+
+.advantages__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+.advantages__items .item__advantages {
+  background: var(--grey-color);
+  padding: 25px;
+  border-radius: 15px;
+}
+.advantages__items .item__image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.advantages__items .item__image .item__text {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--dark-color);
+}
+.advantages__items .item__image img {
+  width: 75px;
+  margin-right: 15px;
+}
+@media (max-width: 767.98px) {
+  .screen__hedding img {
+    margin: 20px 0 30px;
+  }
+  .advantages {
+    margin: 90px 0;
+  }
+  .advantages__items {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+  }
+}
+@media (max-width: 620px) {
+  .screen__description {
+    grid-template-columns: 1fr;
+  }
+  .advantages__items {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=about.css.map */
