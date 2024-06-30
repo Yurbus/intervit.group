@@ -53,7 +53,7 @@
 
 					<div class="header__search">
 						<div class="search__icon">
-							<a href="" class="icon-search"></a>
+							<a id="#popup2" href="#popup2" class="icon-search popup-link"></a>
 						</div>
 					</div>
 
@@ -66,7 +66,7 @@
 					</div>
 
 					<div class="header__button">
-						<a id="# popup" href="#popup" class="popup-link"><span>Зв’язатись з нами</span><img src="img/svg/call-outline.svg" alt=""></a>
+						<a id="#popup" href="#popup" class="popup-link"><span>Зв’язатись з нами</span><img src="img/svg/call-outline.svg" alt=""></a>
 					</div>
 
 				</div>
@@ -354,7 +354,7 @@
 		</div>
 	</footer>
 
-	<!------------- Всплывающая форма -------------w---->
+	<!------------- Всплывающая форма ----------------->
 	<div id="popup" class="popup">
         <div class="popup__body">
             <div class="popup__content">
@@ -403,6 +403,26 @@
                         </div>
                     </form>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!------------- Всплывающая форма поиска ----------------->
+	<div id="popup2" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="search-container">
+                    <a href="#" class="popup__close close-popup feedback_close"><img src="img/svg/close.svg" alt="icon"></a>
+					
+					<form role="search" method="get" class="search-form" action="">
+						<label>
+							<span class="screen-reader-text"></span>
+							<input type="search" class="search-field" placeholder="Пошук" value="" name="s" title="" />
+						</label>
+						<input type="submit" class="search-submit" value="Пошук" />
+					</form>
+               
                 </div>
             </div>
         </div>

@@ -237,6 +237,37 @@ body._touch .menu__list > li._active .menu__arrow {
   color: var(--primary-color);
 }
 
+.search-container {
+  background: var(--white-color);
+  padding: 60px 30px;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 10px;
+}
+
+.search-form {
+  width: 100%;
+}
+.search-form label input {
+  background: #eaedf0;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #5b5b5b;
+  padding: 14px;
+  font-family: "Mulish", sans-serif;
+  width: 320px;
+}
+.search-form .search-submit {
+  background: var(--primary-color);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  color: var(--white-color);
+}
+
 .header__lang {
   margin: 0 25px;
 }
@@ -1202,6 +1233,10 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 110px;
   }
   .hero {
+    margin-bottom: 20px;
+  }
+  .search-form label input {
+    width: 100%;
     margin-bottom: 20px;
   }
 }
