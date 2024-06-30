@@ -1039,7 +1039,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media (max-width: 767.98px) {
   .header__container {
-    min-height: 50px;
+    height: 50px;
   }
   .header__lang {
     display: block;

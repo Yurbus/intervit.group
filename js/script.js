@@ -39,9 +39,6 @@ if (isMobile.any()) {
 				}
 			}
 
-
-
-
 } else {
     document.body.classList.add('_pc');
 }
@@ -120,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
     const totalSlides = slides.length;
-    const slideInterval = 3000; // 3 seconds
+    const slideInterval = 6000; // 3 seconds
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
