@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap');
 
 :root {
-  --page-bg: #F3F3F3;
-  --white-color: #fff;
-  --primary-color: #EF6A37;
-  --pr-hover-color: #e26634;
-  --dark-color: #141414;
-  --grey-color: #DCE0E3;
+	--page-bg: #F3F3F3;
+	--white-color: #fff;
+	--primary-color: #EF6A37;
+	--pr-hover-color: #e26634;
+	--dark-color: #141414;
+	--grey-color: #DCE0E3;
 }
 
 
@@ -113,108 +113,111 @@
 	}
 }
 .achievement__map {
-	margin-top: -300px;
+	margin-top: -250px;
 	overflow-x: auto;
 }
-
 .map-container {
 	position: relative;
-  }
-  
-  .map-image {
+	width: 100vw;
+}
+.map-image {
+	display: flex;
 	width: 100%;
-	height: auto;
-  }
-
+	max-height: 100%;
+   max-width: 100%;
+}
 .point {
-    position: absolute; 
-    text-align: center; 
-    padding: 4px; 
-    border-radius: 50%;
-    background: #EF6A37;
-    width: 4px;
-    height: 4px;
-  }
-  .point::before {
-    content: ''; 
-    position: absolute;
-    border: 2px solid #EF6A37; 
-    left: -10px;
-    opacity: 0;
-    right: -10px;
-    top: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    animation: pulse 2.5s linear infinite; 
-  }
+	position: absolute; 
+	text-align: center; 
+	padding: 4px; 
+	border-radius: 50%;
+	background: #EF6A37;
+	width: 4px;
+	height: 4px;
+}
+.point::before {
+	content: ''; 
+	position: absolute;
+	border: 2px solid #EF6A37; 
+	left: -10px;
+	opacity: 0;
+	right: -10px;
+	top: -10px;
+	bottom: -10px;
+	border-radius: 50%;
+	animation: pulse 2.5s linear infinite; 
+}
 
-  @keyframes pulse {
-    0% {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1.2);
-      opacity: 0;
-    }
-  }
+@keyframes pulse {
+	0% {
+	transform: scale(0.5);
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	transform: scale(1.2);
+	opacity: 0;
+	}
+}
 
-  .point::after,
-  .point::before {
-    content: '';
-    position: absolute;
-    border: 2px solid #EF6A37;
-    left: -10px;
-    opacity: 0;
-    right: -10px;
-    top: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    animation: pulse 2.5s linear infinite;
-  }
-  
-  .point::after {
-    animation-delay: 1.25s;
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1.2);
-      opacity: 0;
-    }
-  }
+.point::after,
+.point::before {
+	content: '';
+	position: absolute;
+	border: 2px solid #EF6A37;
+	left: -10px;
+	opacity: 0;
+	right: -10px;
+	top: -10px;
+	bottom: -10px;
+	border-radius: 50%;
+	animation: pulse 2.5s linear infinite;
+}
+
+.point::after {
+	animation-delay: 1.25s;
+}
+
+@keyframes pulse {
+	0% {
+	transform: scale(0.5);
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	transform: scale(1.2);
+	opacity: 0;
+	}
+}
 
 
 
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/ 
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
 
 
 @media (max-width:767.98px) {
 	.screen__hedding img {
 		margin: 20px 0 30px;
-  }
+}
 	.advantages {
 		margin: 90px 0;
-  }
+}
 	.advantages__items {
 		grid-template-columns: repeat(2, 1fr);
 		margin-top: 30px;
-  }
+}
 }
 @media (max-width:620px) {
 	.screen__description {
 		grid-template-columns: 1fr;
-  }
-  .advantages__items {
+}
+.advantages__items {
 		grid-template-columns: 1fr;
 	}
 	

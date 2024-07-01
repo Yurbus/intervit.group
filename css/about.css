@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
 :root {
   --page-bg: #F3F3F3;
@@ -103,17 +104,20 @@
 }
 
 .achievement__map {
-  margin-top: -300px;
+  margin-top: -250px;
   overflow-x: auto;
 }
 
 .map-container {
   position: relative;
+  width: 100vw;
 }
 
 .map-image {
+  display: flex;
   width: 100%;
-  height: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .point {
@@ -183,6 +187,9 @@
     opacity: 0;
   }
 }
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
 @media (max-width: 767.98px) {
   .screen__hedding img {
     margin: 20px 0 30px;
