@@ -83,7 +83,7 @@
 .location__body {
     display: grid;
     grid-template-columns: 200px 200px 1fr;
-    gap: clamp(30px, 4vw, 100px);
+    gap: clamp(30px, 7vw, 100px);
 }
 .location__phones {
 }
@@ -153,7 +153,12 @@ textarea {
 }
 .contact__btn {
 }
-
+.map {
+    margin-bottom: 30px;
+    iframe {
+        border-radius: 20px;
+    }
+}
 
 
 
@@ -194,5 +199,10 @@ textarea {
 @media (max-width:579.98px) {
     .manager__items {
         grid-template-columns: 1fr;
+    }
+    .map {
+        iframe {
+            height: 350px;
+        }
     }
 }

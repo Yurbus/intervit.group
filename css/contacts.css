@@ -91,7 +91,7 @@
 .location__body {
   display: grid;
   grid-template-columns: 200px 200px 1fr;
-  gap: clamp(30px, 4vw, 100px);
+  gap: clamp(30px, 7vw, 100px);
 }
 
 .location__title {
@@ -138,6 +138,13 @@ textarea {
   margin-bottom: 13px;
 }
 
+.map {
+  margin-bottom: 30px;
+}
+.map iframe {
+  border-radius: 20px;
+}
+
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
 /*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
@@ -169,5 +176,8 @@ textarea {
 @media (max-width: 579.98px) {
   .manager__items {
     grid-template-columns: 1fr;
+  }
+  .map iframe {
+    height: 350px;
   }
 }/*# sourceMappingURL=contacts.css.map */
