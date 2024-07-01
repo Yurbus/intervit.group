@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
+:root {
+  --page-bg: #F3F3F3;
+  --white-color: #fff;
+  --primary-color: #EF6A37;
+  --pr-hover-color: #e26634;
+  --dark-color: #141414;
+  --grey-color: #DCE0E3;
+}
+
+.main__screen {
+  padding: 150px 0 50px;
+}
+
+.screen__hedding {
+  text-align: center;
+}
+.screen__hedding .screen__title {
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 130%;
+  color: var(--dark-color);
+}
+.screen__hedding img {
+  margin: 30px 0 80px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 200px;
+}
+
+.manager__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.manager__card {
+  padding: 50px 70px;
+  border-radius: 15px;
+  background: var(--grey-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.manager__name {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+}
+
+.manager__position {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.manager__line {
+  width: 31px;
+  height: 2px;
+  background: var(--primary-color);
+  margin: 17px 0;
+}
+
+.manager__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.manager__contacts a {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: var(--dark-color);
+}
+.manager__contacts a:hover {
+  color: var(--primary-color);
+}
+
+/*------------ location ---------------------*/
+.location {
+  margin: 100px 0;
+}
+
+.location__body {
+  display: grid;
+  grid-template-columns: 200px 200px 1fr;
+  gap: clamp(30px, 4vw, 100px);
+}
+
+.location__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--dark-color);
+  margin-bottom: 18px;
+}
+
+.location__list span {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+.location__list a {
+  display: block;
+  color: var(--dark-color);
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.address_loc {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: var(--dark-color);
+}
+
+textarea {
+  background: #eaedf0;
+  border-radius: 10px;
+  border: none;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #5b5b5b;
+  padding: 14px;
+  margin-bottom: 13px;
+}
+
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+@media (max-width: 959.98px) {
+  .manager__items {
+    gap: 15px;
+  }
+  .manager__card {
+    padding: 30px;
+  }
+  .manager__name {
+    font-size: 20px;
+  }
+  .location {
+    margin: 40px 0;
+  }
+  .location__body {
+    grid-template-columns: 1fr;
+  }
+  .location__form {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .manager__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 579.98px) {
+  .manager__items {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=contacts.css.map */
