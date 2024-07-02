@@ -66,28 +66,35 @@ ul.breadcrumb li a:hover {
     text-decoration: underline;
 }
 
-
+.content__container {
+    margin-top: 50px;
+}
 .page_container-wrapp {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 30px;
 }
 .sidebar {
-    .product_search-form {
-    }
-    .screen-reader-text {
-    }
-    .search-field {
-    }
-    .search-submit {
-    }
-    .widget {
-    }
-    .widget_categories {
-    }
-    .widget-title {
-    }
-    .cat-item {
+    .sidebar_wrap {
+        padding: 20px;
+        border-radius: 15px;
+        background: var(--grey-color);
+        .product_search-form {
+        }
+        .screen-reader-text {
+        }
+        .search-field {
+        }
+        .search-submit {
+        }
+        .widget {
+        }
+        .widget_categories {
+        }
+        .widget-title {
+        }
+        .cat-item {
+        }
     }
 }
 
@@ -101,6 +108,7 @@ ul.breadcrumb li a:hover {
         background: var(--grey-color);
         border: 1px solid transparent;
         transition: all 0.2s ease 0s;
+        box-shadow: 0px 2px 10px 0px rgba(20,20,20,0.2);
         &:hover {
             background: var(--primary-color);
             border: 1px solid var(--primary-color);
@@ -116,10 +124,12 @@ ul.breadcrumb li a:hover {
         display: block;
         .wp-post-image {
             border-radius: 15px 15px 0 0;
+            object-fit: cover;
         }
         .hover-image {
             position: absolute;
             border-radius: 15px 15px 0 0;
+            object-fit: cover;
             top: 0;
             left: 0;
             transform: scaleX(0);
@@ -134,7 +144,7 @@ ul.breadcrumb li a:hover {
         }
     }
     .entry-title {
-        padding: 20px;
+        padding: 18px 20px 20px;
         a {
             font-weight: 700;
             font-size: 18px;
