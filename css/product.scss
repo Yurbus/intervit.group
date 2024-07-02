@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap');
+
+:root {
+	--page-bg: #F3F3F3;
+	--white-color: #fff;
+	--primary-color: #EF6A37;
+	--pr-hover-color: #e26634;
+	--dark-color: #141414;
+	--grey-color: #DCE0E3;
+}
+
+.product__screen {
+	padding-top: 150px;
+}
+.product__body {
+	
+}
+.product__hedding {
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	.product__title {
+		font-weight: 800;
+		font-size: clamp(32px, 4vw, 52px);
+		line-height: 130%;
+		color: var(--dark-color);
+	}
+    p {
+        display: block;
+        max-width: 588px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.3;
+        text-align: center;
+        color: var(--dark-color);
+    }
+	img {
+		margin: 30px 0 20px;
+		border-radius: 20px;
+		object-fit: cover;
+		min-height: 200px;
+	}
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 16px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--dark-color);
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: var(--pr-hover-color);
+    text-decoration: underline;
+}
+
+
+.page_container-wrapp {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+}
+.sidebar {
+    .product_search-form {
+    }
+    .screen-reader-text {
+    }
+    .search-field {
+    }
+    .search-submit {
+    }
+    .widget {
+    }
+    .widget_categories {
+    }
+    .widget-title {
+    }
+    .cat-item {
+    }
+}
+
+.entries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+    .entry-card {
+        border-radius: 15px;
+        background: var(--grey-color);
+        border: 1px solid transparent;
+        transition: all 0.2s ease 0s;
+        &:hover {
+            background: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            .entry-title {
+                a {
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+    .boundless-image {
+        position: relative;
+        display: block;
+        .wp-post-image {
+            border-radius: 15px 15px 0 0;
+        }
+        .hover-image {
+            position: absolute;
+            border-radius: 15px 15px 0 0;
+            top: 0;
+            left: 0;
+            transform: scaleX(0);
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover {
+            .hover-image {
+                transform: scaleX(1);
+                opacity: 1;
+            } 
+        }
+    }
+    .entry-title {
+        padding: 20px;
+        a {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.4;
+            color: var(--dark-color);
+        }
+    }
+}

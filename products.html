@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/modal-style.css">
 	<link rel="stylesheet" href="css/iconfont.css">
 	<link rel="stylesheet" href="css/main-style.css">	
+	<link rel="stylesheet" href="css/product.css">	
 	<link rel="stylesheet" href="css/font.css">	
 
 </head>
@@ -75,8 +76,88 @@
 		</header>
 		<!---------------------------- page ------------------------------------>
 		<main class="page">
-		
-		</main>
+			<section class="product__screen">
+				<div class="product__container _container">
+					<div class="product__body">
+						<div class="product__hedding">
+							<h1 class="product__title">Продукція</h1>
+							<p>
+								Ми пропонуємо широкий спектр ріжучого інструменту, який відповідає високим 
+								стандартам якості та вимогам металургійної промисловості. 
+							</p>
+							<img src="img/product-main.jpg" alt="photo">
+						</div>
+						<ul class="breadcrumb">
+							<li><a href="#">Головна</a></li>
+							<li>Продукція</li>
+						</ul>
+					</div>
+				</div>
+        </section>
+
+		<!-------- Вывод контента статьи и сайдбар -------->
+		<div class="content__container _container">
+			<div class="page_container-wrapp">
+
+				<aside class="sidebar" id="sidebar">
+					<form role="search" method="get" class="product_search-form" action="">
+						<label>
+							<span class="screen-reader-text"></span>
+							<input type="search" class="search-field" placeholder="Пошук" value="" name="s" title="" />
+						</label>
+						<input type="submit" class="search-submit" value="Пошук" />
+					</form>
+
+					<div class="widget widget_categories">
+						<h3 class="widget-title">Комплектуючі для метизного виробництва</h3>
+						<ul>
+							<li class="cat-item"><a href="">Виробництво металокорду</a></li>
+							<li class="cat-item"><a href="">Виробництво стальної фібри</a></li>
+							<li class="cat-item"><a href="">Проводки прокатних станів</a></li>
+							<li class="cat-item"><a href="">Направляючі ролики</a></li>
+							<li class="cat-item"><a href="">Ролики метизного виробництва</a></li>
+						</ul>   
+					</div>
+					<div class="widget widget_categories">
+						<h3 class="widget-title">Ріжучий інструмент для обробки прокатних валків</h3>
+						<ul>
+							<li class="cat-item"><a href="">Точіння та профілювання</a></li>
+							<li class="cat-item"><a href="">Фрезерування канавки</a></li>
+							<li class="cat-item"><a href="">Фрези маркувальні</a></li>
+							<li class="cat-item"><a href="">Оснастка</a></li>
+						</ul>   
+					</div>
+				</aside>
+
+				<div class="entries cat-page-posts__wrapp posts-container">
+					<article class="entry-card">
+						<a href="" class="boundless-image">
+							<img class="wp-post-image" src="img/products/product_1.jpg" alt="Керамічні вироби">
+							<img class="hover-image" src="img/products/product_1-hover.jpg" alt="Керамічні вироби">
+						</a>	
+						<h2 class="entry-title"><a href="">Керамічні вироби </a></h2>
+					</article>
+					<article class="entry-card">
+						<a href="" class="boundless-image">
+							<img class="wp-post-image" src="img/products/product_2.jpg" alt="Люнет Herkules">
+							<img class="hover-image" src="img/products/product_1-hover.jpg" alt="Керамічні вироби">
+						</a>	
+						<h2 class="entry-title"><a href="">Люнет Herkules</a></h2>
+					</article>
+					<article class="entry-card">
+						<a href="" class="boundless-image">
+							<img class="wp-post-image" src="img/products/product_3.jpg" alt="Твердосплавні ножі">
+							<img class="hover-image" src="img/products/product_1-hover.jpg" alt="Керамічні вироби">
+						</a>	
+						<h2 class="entry-title"><a href="">Твердосплавні ножі для рубки стальної фібри</a></h2>
+					</article>
+				</div>
+			
+			</div>
+		</div>
+
+
+	</main>
 	
 
 	<footer class="footer">
@@ -199,7 +280,6 @@
 						</label>
 						<input type="submit" class="search-submit" value="Пошук" />
 					</form>
-               
                 </div>
             </div>
         </div>
