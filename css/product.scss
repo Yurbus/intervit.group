@@ -80,20 +80,62 @@ ul.breadcrumb li a:hover {
         border-radius: 15px;
         background: var(--grey-color);
         .product_search-form {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-radius: 30px;
+            border: 1px solid #474747;
+            background: transparent;
+            label {
+                width: 100%;
+            }
         }
         .screen-reader-text {
         }
-        .search-field {
+        .search-input {
+            padding: 15px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 0.9;
+            color: var(--dark-color);
+            background: transparent;
+            border: none;
+            width: 100%;
+            border-radius: 30px;
         }
         .search-submit {
+            background: transparent;
+            font-size: 28px;
+            padding: 0 12px;
+            &:hover {
+                color: var(--primary-color);
+            }
         }
         .widget {
         }
         .widget_categories {
         }
         .widget-title {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 1.2;
+            color: var(--dark-color);
+            margin: 25px 0 0;
         }
         .cat-item {
+            border-bottom: 1px solid #c4c9cd;
+
+            a {
+                display: inline-block;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.2;
+                color: var(--dark-color);
+                padding: 11px 0;
+                &:hover {
+                    color: var(--pr-hover-color);
+                }
+            }
         }
     }
 }
@@ -152,4 +194,25 @@ ul.breadcrumb li a:hover {
             color: var(--dark-color);
         }
     }
+}
+
+
+
+
+
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/ 
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+
+@media (max-width:959.98px) {
+
+}
+@media (max-width:767.98px) {
+
+}
+@media (max-width:620.98px) {
+
+}
+@media (max-width:480.98px) {
+
 }

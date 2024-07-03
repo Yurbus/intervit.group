@@ -83,6 +83,58 @@ ul.breadcrumb li a:hover {
   border-radius: 15px;
   background: var(--grey-color);
 }
+.sidebar .sidebar_wrap .product_search-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  border: 1px solid #474747;
+  background: transparent;
+}
+.sidebar .sidebar_wrap .product_search-form label {
+  width: 100%;
+}
+.sidebar .sidebar_wrap .search-input {
+  padding: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.9;
+  color: var(--dark-color);
+  background: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+}
+.sidebar .sidebar_wrap .search-submit {
+  background: transparent;
+  font-size: 28px;
+  padding: 0 12px;
+}
+.sidebar .sidebar_wrap .search-submit:hover {
+  color: var(--primary-color);
+}
+.sidebar .sidebar_wrap .widget-title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--dark-color);
+  margin: 25px 0 0;
+}
+.sidebar .sidebar_wrap .cat-item {
+  border-bottom: 1px solid #c4c9cd;
+}
+.sidebar .sidebar_wrap .cat-item a {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--dark-color);
+  padding: 11px 0;
+}
+.sidebar .sidebar_wrap .cat-item a:hover {
+  color: var(--pr-hover-color);
+}
+
 .entries {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -135,4 +187,8 @@ ul.breadcrumb li a:hover {
   font-size: 18px;
   line-height: 1.4;
   color: var(--dark-color);
-}/*# sourceMappingURL=product.css.map */
+}
+
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*//*# sourceMappingURL=product.css.map */
