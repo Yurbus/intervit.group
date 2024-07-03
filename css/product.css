@@ -78,6 +78,11 @@ ul.breadcrumb li a:hover {
   gap: 30px;
 }
 
+.filter__btn {
+  position: absolute;
+  display: none;
+}
+
 .sidebar .sidebar_wrap {
   padding: 20px;
   border-radius: 15px;
@@ -137,8 +142,8 @@ ul.breadcrumb li a:hover {
 
 .entries {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: clamp(10px, 4vw, 20px);
   margin-bottom: 30px;
 }
 .entries .entry-card {

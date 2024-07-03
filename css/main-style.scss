@@ -82,7 +82,7 @@ body.lock header {
 }
 
 .header__container {
-  max-width: 1300px;
+  max-width: 1320px;
   margin: 0 auto;
   display: flex;
   padding: 0 10px;
@@ -203,7 +203,6 @@ body._touch .menu__list > li._active .menu__arrow {
 .header__action {
   display: flex;
   align-items: center;
-  margin-right: 50px;
   z-index: 1;
 }
 .header__search {
@@ -548,6 +547,7 @@ body._touch .menu__list > li._active .menu__arrow {
   transition: all 0.3s ease 0s;
   padding: 12px 24px;
   border-radius: 30px;
+  border: 1px solid var(--primary-color);
   &:hover {
     color: var(--white-color);
     transition: all 0.3s ease 0s;

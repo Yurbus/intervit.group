@@ -74,6 +74,10 @@ ul.breadcrumb li a:hover {
     grid-template-columns: 320px 1fr;
     gap: 30px;
 }
+.filter__btn {
+    position: absolute;
+    display: none;
+}
 .sidebar {
     .sidebar_wrap {
         padding: 20px;
@@ -142,8 +146,8 @@ ul.breadcrumb li a:hover {
 
 .entries {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: clamp(10px, 4vw, 20px);
     margin-bottom: 30px;
     .entry-card {
         border-radius: 15px;
@@ -203,7 +207,9 @@ ul.breadcrumb li a:hover {
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
 /*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/ 
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+@media (max-width:1180.98px) {
 
+}
 @media (max-width:959.98px) {
 
 }
