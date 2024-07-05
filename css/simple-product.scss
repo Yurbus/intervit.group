@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap');
+
+:root {
+	--page-bg: #F3F3F3;
+	--white-color: #fff;
+	--primary-color: #EF6A37;
+	--pr-hover-color: #e26634;
+	--dark-color: #141414;
+	--grey-color: #DCE0E3;
+}
+
+
+.product-simple {
+	margin-top: 100px;
+}
+.product-simple__body {
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 16px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--dark-color);
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: var(--pr-hover-color);
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/ 
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+
+@media (max-width:959.98px) {
+
+}
+
+@media (max-width:767.98px) {
+
+}
+
+@media (max-width:620px) {
+
+}

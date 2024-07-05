@@ -156,9 +156,21 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(nextSlide, slideInterval);
 });
 
+// Sidebar active
+const iconFilter= document.querySelector('.filter__btn');
+const aside = document.querySelector('.sidebar');
+if (iconFilter) {
+	iconFilter.addEventListener("click", function (e) {
+		document.body.classList.toggle('lock_body');
+		iconFilter.classList.toggle('active');
+		aside.classList.toggle('active');
+	});
+}
 
 
-// Section about
+
+
+// Section about прокрутка чисел
 document.addEventListener('DOMContentLoaded', () => {
     const statsBlock = document.getElementById('stats');
     const stats = document.querySelectorAll('.stat');

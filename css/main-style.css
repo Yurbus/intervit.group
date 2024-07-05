@@ -1140,6 +1140,9 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 16px;
     color: #000;
   }
+  .header__action {
+    margin-right: 50px;
+  }
   /*--- slider ---*/
   .slide {
     height: 470px;
