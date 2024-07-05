@@ -292,5 +292,10 @@ ul.breadcrumb li a:hover {
 
 }
 @media (max-width:480.98px) {
-
+    .product__hedding p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
 }

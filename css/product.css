@@ -288,4 +288,12 @@ ul.breadcrumb li a:hover {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 10px;
   }
+}
+@media (max-width: 480.98px) {
+  .product__hedding p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=product.css.map */
