@@ -412,10 +412,12 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 80px 30px 0;
 }
 .hero__bg img {
+  position: relative;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  filter: brightness(50%);
 }
 
 .slider {
