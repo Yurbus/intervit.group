@@ -156,17 +156,26 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(nextSlide, slideInterval);
 });
 
+
+
 // Sidebar active
 const iconFilter= document.querySelector('.filter__btn');
 const aside = document.querySelector('.sidebar');
+const closeSidebar = document.querySelector('.close_sidebar');
 if (iconFilter) {
 	iconFilter.addEventListener("click", function (e) {
 		document.body.classList.toggle('lock_body');
-		iconFilter.classList.toggle('active');
+		iconFilter.classList.add('active');
 		aside.classList.toggle('active');
 	});
 }
-
+if (closeSidebar) {
+	closeSidebar.addEventListener("click", function (e) {
+		document.body.classList.remove('lock_body');
+        closeSidebar.classList.remove('active');
+		aside.classList.remove('active');
+	});
+}
 
 
 

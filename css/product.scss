@@ -9,7 +9,10 @@
 	--dark-color: #141414;
 	--grey-color: #DCE0E3;
 }
-
+button {
+    border: none;
+    background: transparent;
+}
 .product__screen {
 	padding-top: 150px;
 }
@@ -76,6 +79,12 @@ ul.breadcrumb li a:hover {
     position: absolute;
     display: none;
 }
+.close_sidebar {
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
 .sidebar {
     .sidebar_wrap {
         padding: 20px;
@@ -91,8 +100,6 @@ ul.breadcrumb li a:hover {
             label {
                 width: 100%;
             }
-        }
-        .screen-reader-text {
         }
         .search-input {
             padding: 15px;
@@ -112,10 +119,6 @@ ul.breadcrumb li a:hover {
             &:hover {
                 color: var(--primary-color);
             }
-        }
-        .widget {
-        }
-        .widget_categories {
         }
         .widget-title {
             font-weight: 800;
@@ -238,7 +241,7 @@ ul.breadcrumb li a:hover {
     }
     .sidebar {
         position: fixed;
-        top: 200px;
+        top: 80px;
         max-width: 100%;
         margin-right: 20px;
         transform: translateX(-100%);
@@ -255,6 +258,9 @@ ul.breadcrumb li a:hover {
     }
     .lock_body{
         overflow: hidden;
+    }
+    .close_sidebar {
+        display: block;
     }
     .sidebar_wrap {
         overflow-y: scroll;
