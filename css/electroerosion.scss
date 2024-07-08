@@ -9,15 +9,19 @@
 	--dark-color: #141414;
 	--grey-color: #DCE0E3;
 }
-
-
+img {
+    width: 100%;
+}
 .el-hero {
-    margin-top: 140px;
+    margin: 140px 0 100px;
 }
 .el-hero__body {
 }
 .el-hero__hedding {
     margin-bottom: 140px;
+    img {
+        border-radius: 20px;
+    }
 }
 .el-hero__title {
     font-weight: 800;
@@ -30,7 +34,7 @@
 
 .el-hero__description {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin: 50px 0 80px;
 }
@@ -47,7 +51,7 @@
 }
 .el-hero__description-2 {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
     margin-bottom: 120px;
@@ -69,15 +73,21 @@
     }
 }
 .el-hero__right-2 {
+    img {
+        border-radius: 15px;
+    }
 }
 
 .el-hero__description-3 {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 60px;
 }
 .el-hero__left-3 {
+    img {
+        border-radius: 15px;
+    }
 }
 .el-hero__right-3 {
     span {
@@ -93,8 +103,77 @@
         font-size: 16px;
         line-height: 1.3;
         color: #3a3a3a;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 }
 .warning__text {
+    position: relative;
+    padding: 30px;
+    background: #dce0e3;
+    border-radius: 12px;
+    width: 590px;
+    margin-top: 80px;
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../img/svg/warning.svg') no-repeat;
+        width: 100%;
+        height: 100%;
+        left: 22px;
+        top: -12px;
+    }
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        color: var(--dark-color);
+    }
+}
+
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/ 
+/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+
+@media (max-width: 767.98px) {
+    .el-hero__title {
+        margin-bottom: 15px;
+    }
+    .el-hero__hedding {
+        margin-bottom: 60px;
+    }
+    .el-hero__description {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 20px 0 60px;
+    }
+    .el-hero__description-2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    .el-hero__description-3 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .warning__text {
+        padding: 25px;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .el-hero__left-3 {
+        order: 2;
+    }
+    .el-hero__right-3 {
+        order: 1;
+        span {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .el-hero__right-3 p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
 }
