@@ -141,6 +141,10 @@ img {
     }
     .el-hero__hedding {
         margin-bottom: 60px;
+        img {
+            height: 180px;
+            object-fit: cover;
+        }
     }
     .el-hero__description {
         grid-template-columns: 1fr;

@@ -137,6 +137,11 @@ img {
   .el-hero__hedding {
     margin-bottom: 60px;
   }
+  .el-hero__hedding img {
+    height: 180px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .el-hero__description {
     grid-template-columns: 1fr;
     gap: 30px;
