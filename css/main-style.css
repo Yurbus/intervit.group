@@ -50,20 +50,16 @@ body {
   font-family: "Mulish", sans-serif;
   color: var(--dark-color);
   background: var(--page-bg);
-  transition: all 0.3s ease 0s;
 }
 
 button {
   border: none;
   cursor: pointer;
+  background: transparent;
 }
 
 body.lock {
   overflow: hidden;
-}
-
-body.lock header {
-  padding-right: 17px;
 }
 
 .wrapper {
