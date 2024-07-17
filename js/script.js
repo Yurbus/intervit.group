@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---------- Для видео -------------------------------------
-document.addEventListener('DOMContentLoaded', () => {
+
 
     const itemsVd = document.querySelectorAll('.video-item');
     const buttonVd = document.getElementById('more_video');
@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         itemsVd.forEach((item, index) => {
             if (index < itemsToShowV) {
                 item.classList.add('show');
+                
             }
         });
         // Скрыть кнопку, если показаны все элементы
@@ -281,4 +282,3 @@ document.addEventListener('DOMContentLoaded', () => {
             buttonVd.style.display = 'none';
         }
     });
-});
