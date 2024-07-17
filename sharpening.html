@@ -87,6 +87,7 @@
 				</div>
 			</section>
 
+			<!---------------------------- sharpening  types ------------------------------------>
 			<section class="sharpening__types">
 				<div class="_container">
 					<div class="types__body">
@@ -111,6 +112,24 @@
 					</div>
 				</div>
 			</section>
+			<!----------------------------  ------------------------------------>
+			<section class="gallery">
+				<div class="gallery__container _container">
+					<div class="gallery__body">
+						<h2 class="gallery__title"></h2>
+						<div class="gallery__wrapp">
+							<a href="img/grinding/image-123.jpg"><img src="img/grinding/image-123.jpg" alt="photo"></a>					
+							<a href="img/grinding/image-124.jpg"><img src="img/grinding/image-124.jpg" alt="photo"></a>					
+							<a href="img/grinding/image-125.jpg"><img src="img/grinding/image-125.jpg" alt="photo"></a>						
+							<a href="img/grinding/image-127.jpg"><img src="img/grinding/image-127.jpg" alt="photo"></a>					
+							<a href="img/grinding/image-128.jpg"><img src="img/grinding/image-128.jpg" alt="photo"></a>
+							<a href="img/grinding/image-131.jpg"><img src="img/grinding/image-131.jpg" alt="photo"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
 		</main>
 	
 
@@ -234,7 +253,6 @@
 						</label>
 						<input type="submit" class="search-submit" value="Пошук" />
 					</form>
-               
                 </div>
             </div>
         </div>
@@ -251,7 +269,7 @@
 		AOS.init();
 	</script>
 	<script>
-		$(".item").magnificPopup({
+		$(".gallery__wrapp a").magnificPopup({
 		type : 'image',
 		gallery : {
 			enabled : true
