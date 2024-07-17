@@ -54,7 +54,8 @@ if (iconMenu) {
 	});
 }
 
-// Прокрутка при клике
+// -------- Прокрутка при клике -----------------------------------------
+
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if(menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
@@ -81,6 +82,9 @@ if(menuLinks.length > 0) {
 		}
 	}
 }
+
+
+// --------- Переключение языка ------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
     const headerLang = document.querySelector('.header__lang');
@@ -109,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Slider hero 
+// ----------- Slider hero -----------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll('.slide');
@@ -158,7 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Sidebar active
+// ---------- Sidebar active ---------------------------------------------------------
+
 const iconFilter= document.querySelector('.filter__btn');
 const aside = document.querySelector('.sidebar');
 const closeSidebar = document.querySelector('.close_sidebar');
@@ -179,7 +184,7 @@ if (closeSidebar) {
 
 
 
-// Section about прокрутка чисел
+// ------- Section about прокрутка чисел ---------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const statsBlock = document.getElementById('stats');
     const stats = document.querySelectorAll('.stat');
@@ -215,4 +220,65 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, stepTime);
     }
+});
+
+
+// ------- Показать больше фото ---------------------------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.gallery-item');
+    const button = document.getElementById('more');
+
+    let itemsToShow = 6;
+    const increment = window.innerWidth < 767 ? 2 : 3;
+
+    // Показать начальный набор предметов
+    items.forEach((item, index) => {
+        if (index < itemsToShow) {
+            item.classList.add('show');
+        }
+    });
+    // Добавить слушиватель событий клика на кнопку
+    button.addEventListener('click', () => {
+        itemsToShow += increment;
+        items.forEach((item, index) => {
+            if (index < itemsToShow) {
+                item.classList.add('show');
+            }
+        });
+        // Скрыть кнопку, если показаны все элементы
+        if (itemsToShow >= items.length) {
+            button.style.display = 'none';
+        }
+    });
+});
+
+// ---------- Для видео -------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+
+    const itemsVd = document.querySelectorAll('.video-item');
+    const buttonVd = document.getElementById('more_video');
+
+    let itemsToShowV = 6;
+    const incrementV = window.innerWidth < 767 ? 2 : 3;
+
+    // Показать начальный набор предметов
+    itemsVd.forEach((itemsVd, index) => {
+        if (index < itemsToShowV) {
+            itemsVd.classList.add('show');
+        }
+    });
+    // Добавить слушиватель событий клика на кнопку
+    buttonVd.addEventListener('click', () => {
+        itemsToShowV += incrementV;
+        itemsVd.forEach((item, index) => {
+            if (index < itemsToShowV) {
+                item.classList.add('show');
+            }
+        });
+        // Скрыть кнопку, если показаны все элементы
+        if (itemsToShowV >= itemsVd.length) {
+            buttonVd.style.display = 'none';
+        }
+    });
 });
