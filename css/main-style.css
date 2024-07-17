@@ -454,7 +454,7 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: bold;
   color: var(--white-color);
   margin: 10px 0;
-  max-width: 660px;
+  max-width: 690px;
   animation: fadeInUp 1s ease-in-out;
 }
 

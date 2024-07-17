@@ -65,8 +65,6 @@ img {
     
 }
 
-
-
 .gallery {
     margin: 50px 0;
 }
@@ -116,6 +114,9 @@ img {
     
 }
 
+.gallery__body-video {
+    margin-top: 50px;
+}
 .gallery__wrapp-video {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -178,15 +179,64 @@ img {
 .workcutter__right {
 }
 
+.process {
+    padding: 50px 0 100px;
+}
+.process__body {
+}
+.process__title {
+    max-width: 690px;
+}
+.process__wrap-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 70px;
+    margin-top: 60px;
+}
+.item__process {
+    .number {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+    .proc__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.3;
+        color: var(--dark-color);
+        margin-bottom: 10px;
+    }
+    .proc__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.3;
+        color: var(--dark-color);
+    }
+    
+}
+
+
+
+
+
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
 /*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/ 
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
 @media (max-width:767.98px) {
-    .sharpening__hedding img {
-        height: 180px;
-    }
+    .sharpening__hedding {
+        margin-bottom: 70px;
+        img {
+            height: 180px;
+        }
+    } 
     .types__body {
         grid-template-columns: 1fr;
+    }
+    .types__image {
+        order: 2;
     }
     .gallery__wrapp {
         grid-template-columns: repeat(2, 1fr);
@@ -202,6 +252,12 @@ img {
     .workcutter__body {
         grid-template-columns: 1fr;
     }
+    .process__wrap-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 30px;
+    }
 }
 
 @media (max-width:430.98px) {
@@ -210,5 +266,10 @@ img {
     }
     .gallery__wrapp-video {
         grid-template-columns: 1fr;
+    }
+    .process__wrap-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
