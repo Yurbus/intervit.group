@@ -84,6 +84,9 @@ img {
 
 .el-hero__left-3 img {
   border-radius: 15px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .el-hero__right-3 span {

@@ -186,6 +186,10 @@ textarea {
     }
     .location__form {
         margin-top: 30px;
+        order: 1;
+    }
+    .location__address {
+        order: 2;
     }
     
 }

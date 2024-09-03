@@ -639,6 +639,17 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
 }
 
+.number__wrapp {
+  display: flex;
+  align-items: center;
+}
+.number__wrapp span {
+  font-family: "Conthrax Sb";
+  font-size: 48px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
 .number {
   font-family: "Conthrax Sb";
   font-size: 48px;
